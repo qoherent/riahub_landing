@@ -5,5 +5,5 @@
 
 ### Where to edit 
 
-- To edit the text in the center navigate to `layout/index.html` and edit the <p> tags with class text
+- To edit the text in the center navigate to `layout/index.html` and edit the `<p>` tags with class text
 - To edit all surrounding text edit the text in `hugo.toml`
