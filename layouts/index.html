@@ -1,0 +1,74 @@
+{{ define "main" }}
+<link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
+<link rel="dns-prefetch" href="https://use.fontawesome.com" />
+    <div class="bgimg">
+        <video autoplay muted loop poster="poster.jpg" id="background-video">
+            {{ if .Site.Params.background }}
+                <source src="{{ .Site.Params.background }}" type="video/mp4">
+            {{ else }}
+                <source src="bg.mp4" type="video/mp4">
+            {{ end }}
+        </video>
+        {{ if .Site.Params.twitter.enable }}
+            <div class="topright"> 
+                {{ partial "twitter-feed.html" . }}
+            </div>        
+        {{ end }}
+        <div class="topleft">
+            {{ if .Site.Params.title }}
+                <p>{{ .Site.Params.title }}</p>
+            {{ else }}
+                <p>Coming Soon</p>
+            {{ end }}
+        </div>
+        <div class="middle">
+            {{ if .Site.Params.message }}
+                <h1>{{ .Site.Params.message }}</h1>
+            {{ else }}
+                <h1>COMING SOON</h1>
+            {{ end }}
+            <hr>
+            {{/*<p id="demo"></p>
+            <div id="countdown" data-release="{{ .Site.Params.release }}"></div>*/}}
+            <div class="text-outer">
+                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <p class="text">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                    <script>
+                    hbspt.forms.create({
+                        region: "na1",
+                        portalId: "45248873",
+                        formId: "1fba45f6-b9bc-44ac-b908-8ac42274ae72"
+                    });
+                    </script>
+            </div>
+        </div>
+        <div class="bottomleft">
+            <p>
+            {{ .Site.Params.description}}</p>
+        </div>
+    </div>
+    <div class="left">
+        {{ if isset .Site.Params "socialicons" }}
+        <section class="social-icons">
+            <ul class="social-icons-list">
+                {{ range .Site.Params.SocialIcons }}
+                <li class="social-icon">
+                    {{ $iconName := .name }}
+                    <a href="{{ if eq $iconName "email" }}mailto:{{ .url }} {{ else }}{{ .url }}{{ end }}"
+                       {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+                        <img src="{{ $.Site.BaseURL }}/svg/icons/{{ .name }}.svg" alt="test" />
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+    </div>
+        <script src="{{ "/js/script.js" | relURL }}"></script>
+        <script>
+            var video = document.getElementById('background-video');
+            video.playbackRate = 0.5; 
+        </script>
+        
+{{ end }}

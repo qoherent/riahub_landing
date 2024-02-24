@@ -1,0 +1,17 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[params]
+    title = "Qoherent" 
+    description = "Something here?"
+    favicon = "../static/favicon"
+    message = "RIAHUB COMING SOON!" 
+    release = "June 20, 2025" 
+    background = "" 
+
+socialIcons = [
+    {name = "twitter", url = "https://twitter.com/"},    
+    {name = "github", url = "https://github.com/"},   
+    {name = "linkedin", url = "https://github.com/"},
+] 
