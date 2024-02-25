@@ -11,7 +11,7 @@ title = 'My New Hugo Site'
     background = "" 
 
 socialIcons = [
-    {name = "twitter", url = "https://twitter.com/"},    
-    {name = "github", url = "https://github.com/"},   
-    {name = "linkedin", url = "https://github.com/"},
+    {name = "twitter", url = "https://twitter.com/qoherent"},    
+    {name = "github", url = "https://github.com/qoherent"},   
+    {name = "linkedin", url = "https://www.linkedin.com/company/qoherent/"},
 ] 
