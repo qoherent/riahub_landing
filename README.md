@@ -1,7 +1,5 @@
 <h2 align="center">This repo serves the landing page for Qoherent's RIAHUB, for more information visit riahub.ai</h2>
 
-<hr>
-
 <h1 align="center">About Qoherent</h1>
 
 <p align="center">Qoherent™ is a technology company that specializes in AI development for software-defined radios, focusing on streamlining the workflow for radio signal processing engineers and researchers in wireless technologies with software and IP products. Intelligent radios integrate machine learning-based signal processing to build more robust, aware, and adaptive radiofrequency (RF) communications and sensing systems that generally outperform traditional radio systems.</p>
