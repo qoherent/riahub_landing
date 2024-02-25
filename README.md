@@ -2,24 +2,23 @@
 
 <h1 align="center">About Qoherent</h1>
 
-<p align="center">Qoherent™ is a technology company that specializes in AI development for software-defined radios, focusing on streamlining the workflow for radio signal processing engineers and researchers in wireless technologies with software and IP products. Intelligent radios integrate machine learning-based signal processing to build more robust, aware, and adaptive radiofrequency (RF) communications and sensing systems that generally outperform traditional radio systems.</p>
+<p align="center">Qoherent™ is a technology company that specializes in AI development for software-defined radios (SDR’s), focusing on streamlining the workflow for radio signal processing engineers and researchers in wireless technologies with software and data products.</p>
 
 <p align="center">
-Qoherent creates data-driven solutions using machine learning techniques for passive sensing of the RF spectrum to identify and analyze signals such as LTE, 5GNR, and more. Our product offering includes application-specific IP composed of datasets and models, as well as design tools that help engineers bridge the knowledge gap between the RF and ML domains. Qoherent also investigates applications of quantum machine learning as applied to real-world RF problems.
+Qoherent helps scientists and engineers explore applications of AI on software-defined radios. We strive to propel intelligent radio innovations through rapid prototyping and design automation tools that are tightly integrated with existing commercial technologies. Focused on the complex spectrum conditions inherent to the space, telecommunications, and defense sectors, we empower our customers to create AI-enabled solutions for more effective sensing and communications systems.
 </p>
 
 <p align="center">
-Qoherent’s team of RF and machine learning experts are passionate about working with scientists and engineers to solve hard problems. We come from a diverse background that includes test & measurement, data analytics, and cybersecurity. We are experts in bridging the gap between machine learning and radio signal processing.
 </p>
 
 <hr>
 
-<h1 align="center">How to start editing</h1>
+<h3 align="center">How to start editing</h3>
 
 1. Clone the repository
 2. CD into it and `hugo server` to launch in `localhost:1313`
 
-<h1 align="center">Where to edit</h1>
+<h4 align="center">Where to edit</h4>
 
 - To edit the text in the center navigate to `layout/index.html` and edit the `<p>` tags with class text
 - To edit all surrounding text edit the text in `hugo.toml`

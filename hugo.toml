@@ -1,12 +1,12 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'RIAHUB - Let's build intelligent radios together.'
 
 [params]
     title = "Qoherent" 
-    description = "Something here?"
+    description = "Let's build intelligent radios together."
     favicon = "../static/favicon"
-    message = "RIAHUB COMING SOON!" 
+    message = "RIAHUB - COMING SOON!" 
     release = "June 20, 2025" 
     background = "" 
 
