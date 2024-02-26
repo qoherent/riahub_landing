@@ -58,14 +58,14 @@
             Lets build intelligent radios together.</p>
         </div>
     </div>
-    <div class="left">
+    <div class="bottomright">
         
         <section class="social-icons">
             <ul class="social-icons-list">
                 
                 <li class="social-icon">
                     
-                    <a href="https://twitter.com/qoherent"
+                    <a href="https://twitter.com/qoherent" target="blank"
                        >
                         <img src="//svg/icons/twitter.svg" alt="test" />
                     </a>
@@ -73,7 +73,7 @@
                 
                 <li class="social-icon">
                     
-                    <a href="https://github.com/qoherent"
+                    <a href="https://github.com/qoherent" target="blank"
                        >
                         <img src="//svg/icons/github.svg" alt="test" />
                     </a>
@@ -81,7 +81,7 @@
                 
                 <li class="social-icon">
                     
-                    <a href="https://www.linkedin.com/company/qoherent/"
+                    <a href="https://www.linkedin.com/company/qoherent/" target="blank"
                        >
                         <img src="//svg/icons/linkedin.svg" alt="test" />
                     </a>
@@ -101,154 +101,205 @@
 </html>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        }
-        
-        .bgimg {
-        /* Full-screen */
-        height: 100vh; /* Use viewport height for full-screen height */
-        /* Center the background image */
-        background-position: center;
-        /* Scale and zoom in the image */
-        background-size: cover;
-        /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-        position: relative;
-        /* Add a white text color to all elements inside the .bgimg container */
-        color: white;
-        /* Add a font */
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-        /* Set the font-size to 25 pixels */
-        font-size: 25px;
-        }
-        
-        .bgimg video {
+  * {
+      margin: 0;
+      padding: 0;
+      }
+      
+      .bgimg {
+      /* Full-screen */
+      height: 100vh; /* Use viewport height for full-screen height */
+      /* Center the background image */
+      background-position: center;
+      /* Scale and zoom in the image */
+      background-size: cover;
+      /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+      position: relative;
+      /* Add a white text color to all elements inside the .bgimg container */
+      color: white;
+      /* Add a font */
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      /* Set the font-size to 25 pixels */
+      font-size: 25px;
+      }
+      
+      .bgimg video {
+      width: 100%;
+      height: 100%; /* Make the video fill the entire .bgimg container */
+      object-fit: cover; /* Make the video cover the container without stretching */
+      display: block; /* Remove any extra spacing */
+      position: absolute; /* Position the video absolutely within the .bgimg container */
+      }
+      
+      
+      /* Position text in the top-left corner */
+      .topleft {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      }
+      
+      /* Position text in the bottom-left corner */
+      .bottomleft {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      }
+      
+      /* Position text in the middle */
+      .middle {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+      }
+
+      .middle h1 {
+        text-align: center;
+      }
+      
+      .text-outer {
+        font-size: 20px;
         width: 100%;
-        height: 100%; /* Make the video fill the entire .bgimg container */
-        object-fit: cover; /* Make the video cover the container without stretching */
-        display: block; /* Remove any extra spacing */
-        position: absolute; /* Position the video absolutely within the .bgimg container */
-        opacity: 0.9;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      
+      .text {
+        margin-top: 10px;
+        text-align: center;
+      }
+      
+      .text a {
+        color: white;
+      }
+      
+      .text a:hover {
+        text-decoration: none;
+      }
+      
+      
+      .menu-container div {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .menu ul {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #demo{
+        font-size:30px;
+        padding: 10px;
+      }
+      @media screen AND (max-width:600px) {
+        .middle h1{
+          font-size: 35px;
         }
-        
-        
-        /* Position text in the top-left corner */
-        .topleft {
+        #demo{
+          font-size: 20px;
+        }
+      }
+      
+      /* Style the <hr> element */
+      hr {
+      margin: 15px auto 15px auto;
+      width: 40%;
+      }
+      
+      /* right side */ 
+      .social-icons {
+        text-align: center;
+        filter: brightness(0) invert(1);
+      }
+      
+      .social-icons .social-icons-list {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+      }
+      
+      .social-icons-list .social-icon {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 24px;
+        margin: 0 6px;
+        width: 24px;
+      }
+      
+      .social-icon a svg path {
+        transition: fill 0.15s ease;
+      }
+      
+      .topright {
         position: absolute;
         top: 16px;
-        left: 16px;
-        }
-        
-        /* Position text in the bottom-left corner */
-        .bottomleft {
+        right: 15px;
+      }
+      
+      .topright a{ 
+        text-decoration: none;
+        color: #0e0e10;
+      }
+      
+      /* left side */
+      .left{
+        right: 0;
+        bottom: 10px;
         position: absolute;
-        bottom: 16px;
-        left: 16px;
+      }
+
+      /* bottom right */
+      .bottomright {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+
+      @media screen and (max-width: 1050px) {
+        .bgimg {
+          height: 115vh;
         }
-        
-        /* Position text in the middle */
+
         .middle {
-          position: absolute;
-          top: 30%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          justify-content: center;
+          top: 25%;
         }
-        
-        .text-outer {
-          font-size: 20px;
-          width: 100%;
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, 0);
+      }
+
+      @media screen and (max-width: 895px) {
+        .bgimg {
+          height: 120vh;
         }
-        
-        .text {
-          margin-top: 10px;
-          text-align: center;
+
+        .middle {
+          width: 75%;
         }
-        
-        .text a {
-          color: white;
+      }
+
+      @media screen and (max-width: 585px) {
+        .bottomleft {
+          display: none;
         }
-        
-        .text a:hover {
-          text-decoration: none;
+      }
+
+      @media screen and (max-width: 395px) {
+        .bgimg {
+          height: 125vh;
         }
-        
-        
-        .menu-container div {
-          display: flex;
-          justify-content: center;
+
+        .middle {
+          top: 20%;
         }
-        
-        .menu ul {
-          display: flex;
-          flex-direction: column;
+      }
+
+      @media screen and (max-width: 300px) {
+        .bgimg {
+          height: 135vh;
         }
-        
-        #demo{
-          font-size:30px;
-          padding: 10px;
-        }
-        @media screen AND (max-width:600px) {
-          .middle h1{
-            font-size: 20px;
-          }
-          #demo{
-            font-size: 20px;
-          }
-        }
-        
-        /* Style the <hr> element */
-        hr {
-        margin: 15px auto 15px auto;
-        width: 40%;
-        }
-        
-        /* right side */ 
-        .social-icons {
-          text-align: center;
-          filter: brightness(0) invert(1);
-        }
-        
-        .social-icons .social-icons-list {
-          display: inline-block;
-          list-style-type: none;
-          padding: 0;
-          text-align: center;
-        }
-        
-        .social-icons-list .social-icon {
-          box-sizing: border-box;
-          display: inline-block;
-          height: 24px;
-          margin: 0 6px;
-          width: 24px;
-        }
-        
-        .social-icon a svg path {
-          transition: fill 0.15s ease;
-        }
-        
-        .topright {
-          position: absolute;
-          top: 16px;
-          right: 15px;
-        }
-        
-        .topright a{ 
-          text-decoration: none;
-          color: #0e0e10;
-        }
-        
-        /* left side */
-        .left{
-          right: 0;
-          bottom: 10px;
-          position: absolute;
-        }
-        
+      }
 </style>
