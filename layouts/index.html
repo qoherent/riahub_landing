@@ -1,92 +1,85 @@
 {{ define "main" }}
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
-  <div class="bgimg">
-        <video autoplay muted loop poster="poster.jpg" id="background-video">
-            {{ if .Site.Params.background }}
-                <source src="{{ .Site.Params.background }}" type="video/mp4">
-            {{ else }}
-                <source src="bg.mp4" type="video/mp4">
-            {{ end }}
-        </video>
-        {{ if .Site.Params.twitter.enable }}
-            <div class="topright"> 
-                {{ partial "twitter-feed.html" . }}
-            </div>        
-        {{ end }}
-        <div class="topleft">
-            {{ if .Site.Params.title }}
-                <p>{{ .Site.Params.title }}</p>
-            {{ else }}
-                <p>Coming Soon</p>
-            {{ end }}
-        </div>
-        <div class="middle">
-            {{ if .Site.Params.message }}
-                <h1>{{ .Site.Params.message }}</h1>
-            {{ else }}
-                <h1>COMING SOON</h1>
-            {{ end }}
-            <hr>
-            {{/*<p id="demo"></p>
-            <div id="countdown" data-release="{{ .Site.Params.release }}"></div>*/}}
-            <div class="text-outer">
-                <p class="text">RIAHUB is an AI development and deployment platform for software-defined radios. </p>
-                <p class="text">To give you a sneak peak, you can use RIAHUB to:</p><br>
-                <div class="menu-container">    
-                    <div class="menu">
-                        <ul>
-                            <li>Synthesize and curate ML ready datasets of IQ data and spectrograms</li>
-                            <li>Train high-performance models</li>
-                            <li>Share your models and datasets with colleagues or to a community</li>
-                            <li>Deploy your models to a range of SDR-enabled targets.</li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
-                <p class="text">Sign up for our early access program below.</p>
-            
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                  <script>
-                    hbspt.forms.create({
-                      region: "na1",
-                      portalId: "45248873",
-                      formId: "1fba45f6-b9bc-44ac-b908-8ac42274ae72"
-                    });
-                  </script>
-            </div>
-        </div>
-        <div class="bottomleft">
-            <p>
-            {{ .Site.Params.description}}</p>
-        </div>
-        <div class="bottomright">
-            {{ if isset .Site.Params "socialicons" }}
-            <section class="social-icons">
-                <ul class="social-icons-list">
-                    {{ range .Site.Params.SocialIcons }}
-                    <li class="social-icon">
-                        {{ $iconName := .name }}
-                        <a href="{{ if eq $iconName "email" }}mailto:{{ .url }} {{ else }}{{ .url }}{{ end }}"
-                           {{ if .rel }}rel="{{ .rel }}"{{ end }}>
-                            <img src="{{ $.Site.BaseURL }}/svg/icons/{{ .name }}.svg" alt="test" />
-                        </a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </section>
-            {{ end }}
-        </div>
-    </div>
-    <div class="left">
-        <script src="{{ "/js/script.js" | relURL }}"></script>
-        <script>
-            var video = document.getElementById('background-video');
-            video.playbackRate = 0.5; 
-        </script>
-
-    </div>
+<div class="bgimg">
+  <img src="bg-gif.gif" alt="Background GIF" id="background-gif">
+  {{ if .Site.Params.twitter.enable }}
+      <div class="topright"> 
+          {{ partial "twitter-feed.html" . }}
+      </div>        
+  {{ end }}
+  <div class="topleft">
+      {{ if .Site.Params.title }}
+          <p>{{ .Site.Params.title }}</p>
+      {{ else }}
+          <p>Coming Soon</p>
+      {{ end }}
   </div>
+  <div class="middle">
+      {{ if .Site.Params.message }}
+          <h1>{{ .Site.Params.message }}</h1>
+      {{ else }}
+          <h1>COMING SOON</h1>
+      {{ end }}
+      <hr>
+      {{/*<p id="demo"></p>
+      <div id="countdown" data-release="{{ .Site.Params.release }}"></div>*/}}
+      <div class="text-outer">
+          <p class="text">RIAHUB is an AI development and deployment platform for software-defined radios. </p>
+          <p class="text">To give you a sneak peak, you can use RIAHUB to:</p><br>
+          <div class="menu-container">    
+              <div class="menu">
+                  <ul>
+                      <li>Synthesize and curate ML ready datasets of IQ data and spectrograms</li>
+                      <li>Train high-performance models</li>
+                      <li>Share your models and datasets with colleagues or to a community</li>
+                      <li>Deploy your models to a range of SDR-enabled targets.</li>
+                  </ul>
+              </div>
+          </div>
+          <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
+          <p class="text">Sign up for our early access program below.</p>
+      
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "45248873",
+                formId: "1fba45f6-b9bc-44ac-b908-8ac42274ae72"
+              });
+            </script>
+      </div>
+  </div>
+  <div class="bottomleft">
+      <p>
+      {{ .Site.Params.description}}</p>
+  </div>
+  <div class="bottomright">
+      {{ if isset .Site.Params "socialicons" }}
+      <section class="social-icons">
+          <ul class="social-icons-list">
+              {{ range .Site.Params.SocialIcons }}
+              <li class="social-icon">
+                  {{ $iconName := .name }}
+                  <a href="{{ if eq $iconName "email" }}mailto:{{ .url }} {{ else }}{{ .url }}{{ end }}"
+                     {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+                      <img src="{{ $.Site.BaseURL }}/svg/icons/{{ .name }}.svg" alt="test" />
+                  </a>
+              </li>
+              {{ end }}
+          </ul>
+      </section>
+      {{ end }}
+  </div>
+</div>
+<div class="left">
+  <script src="{{ "/js/script.js" | relURL }}"></script>
+  <script>
+      // You may include any JavaScript specific to your gif here
+  </script>
+
+</div>
+</div>
   <style>
     * {
         margin: 0;
@@ -111,7 +104,7 @@
         font-size: 25px;
         }
         
-        .bgimg video {
+        .bgimg #background-gif {
         width: 100%;
         height: 100%; /* Make the video fill the entire .bgimg container */
         object-fit: cover; /* Make the video cover the container without stretching */
