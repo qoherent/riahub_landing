@@ -26,7 +26,7 @@
       <div id="countdown" data-release="{{ .Site.Params.release }}"></div>*/}}
       <div class="text-outer">
           <p class="text">RIAHUB is an AI development and deployment platform for software-defined radios. </p>
-          <p class="text">To give you a sneak peak, you can use RIAHUB to:</p><br>
+          <p class="text">You can use RIAHUB to:</p><br>
           <div class="menu-container">    
               <div class="menu">
                   <ul>
@@ -39,7 +39,7 @@
           </div>
           <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
           <p class="text">Sign up for our early access program below.</p>
-      
+          <br>
           <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
             <script>
               hbspt.forms.create({
@@ -74,9 +74,6 @@
 </div>
 <div class="left">
   <script src="{{ "/js/script.js" | relURL }}"></script>
-  <script>
-      // You may include any JavaScript specific to your gif here
-  </script>
 
 </div>
 </div>
@@ -215,6 +212,14 @@
         
         .social-icon a svg path {
           transition: fill 0.15s ease;
+        }
+
+        .social-icon a {
+          transition: ease-in-out 0.1s;
+        }
+
+        .social-icon a:hover {
+          opacity: 0.75;
         }
         
         .topright {

@@ -5,7 +5,7 @@ title = 'RIAHUB - Lets build intelligent radios together.'
 [params]
     title = "RIAHUB" 
     description = "Let's build intelligent radios together."
-    favicon = "../static/favicon"
+    favicon = "favicon.ico"
     message = "RIAHUB - COMING SOON!" 
     release = "June 20, 2025" 
     background = "" 
