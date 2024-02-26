@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://qoherent.github.io/riahub_landing'
 languageCode = 'en-us'
 title = 'RIAHUB - Lets build intelligent radios together.'
 
