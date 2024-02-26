@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'RIAHUB - Lets build intelligent radios together.'
 
 [params]
-    title = "RIAHUB" 
+    title = "" 
     description = "Let's build intelligent radios together."
     favicon = "favicon.ico"
     message = "RIAHUB - COMING SOON!" 

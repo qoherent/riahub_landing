@@ -12,7 +12,7 @@
       {{ if .Site.Params.title }}
           <p>{{ .Site.Params.title }}</p>
       {{ else }}
-          <p>Coming Soon</p>
+          <a href="/"><img class="logo" src="logo-darkmode.png" alt="Qoherent"></a>
       {{ end }}
   </div>
   <div class="middle">
@@ -108,6 +108,11 @@
         object-fit: cover; /* Make the video cover the container without stretching */
         display: block; /* Remove any extra spacing */
         position: absolute; /* Position the video absolutely within the .bgimg container */
+        }
+
+        .logo {
+          width: 150px;
+          height: 32px;
         }
         
         
