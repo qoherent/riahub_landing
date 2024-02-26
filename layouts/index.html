@@ -40,7 +40,7 @@
           <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
           <p class="text">Sign up for our early access program below:</p>
           <br>
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <div class="form-div"><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
           <script>
             hbspt.forms.create({
               region: "na1",
@@ -48,6 +48,7 @@
               formId: "1fba45f6-b9bc-44ac-b908-8ac42274ae72"
             });
           </script>
+          </div>
       </div>
   </div>
   <div class="bottomleft">
@@ -137,6 +138,19 @@
         .middle h1 {
           text-align: center;
           font-family: "Courier New", Courier, monospace;
+        }
+
+        .middle .form-div {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          width: 70%;
+        }
+
+        @media screen and (max-width: 1350px) {
+          .middle .form-div {
+            width: 85%;
+          }
         }
         
         .text-outer {
