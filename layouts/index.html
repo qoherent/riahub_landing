@@ -1,6 +1,4 @@
 {{ define "main" }}
-<link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
-<link rel="dns-prefetch" href="https://use.fontawesome.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -46,7 +44,8 @@
           <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
           <p class="text">Sign up for our early access program below:</p>
           <br>
-          <div class="form-div"><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <div class="form-div">
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
           <script>
             hbspt.forms.create({
               region: "na1",
@@ -216,7 +215,8 @@
           font-size:30px;
           padding: 10px;
         }
-        @media screen AND (max-width:600px) {
+
+        @media screen and (max-width:600px) {
           .middle h1{
             font-size: 35px;
           }
@@ -313,28 +313,13 @@
           }
         }
 
-        @media screen and (max-height: 800px) {
-          .bgimg {
-            height: 150vh;
-          }
-        }
-
-        @media screen and (max-height: 650px) {
-          .bgimg {
-            height: 200vh;
-          }
-        }
-
-        @media screen and (max-height: 500px) {
-          .bgimg {
-            height: 250vh;
+        @media screen and (max-width: 650px) {
+          .bottomleft {
+            display: none;
           }
         }
 
         @media screen and (max-width: 585px) {
-          .bottomleft {
-            display: none;
-          }
 
           .bgimg {
             height: 150vh;
@@ -362,7 +347,160 @@
             height: 225vh;
           }
         }
-        
+
+        @media screen and (max-height: 800px) {
+          .bgimg {
+            height: 150vh;
+          }
+        }
+
+        @media screen and (max-height: 675px) {
+          .bgimg {
+            height: 220vh;
+          }
+        }
+
+        @media screen and (max-height: 500px) {
+          .bgimg {
+            height: 250vh;
+          }
+        }
+
+        @media screen and (max-height: 425px) {
+          .bgimg {
+            height: 275vh;
+          }
+        }
+
+        @media screen and (max-height: 375px) {
+          .bgimg {
+            height: 300vh;
+          }
+        }
+
+        @media screen and (max-height: 315px) {
+          .bgimg {
+            height: 325vh;
+          }
+        }
+
+        @media screen and (max-height: 285px) {
+          .bgimg {
+            height: 365vh;
+          }
+        }
+
+        @media screen and (max-height: 250px) {
+          .bgimg {
+            height: 500vh;
+          }
+        }
+
+        @media screen and (max-height: 200px) {
+          .bgimg {
+            height: 700vh;
+          }
+        }
+
+        @media screen and (max-width: 425px) and (max-height:443px) {
+          .bgimg {
+            height: 300vh;
+          }
+        }
+
+        @media screen and (max-width: 320px) and (max-height:443px) {
+          .bgimg {
+            height: 325vh;
+          }
+        }
+
+        @media screen and (max-width: 1024px) and (max-height:700px) {
+          .bgimg {
+            height: 200vh;
+          }
+        }
+
+        @media screen and (max-width: 425px) and (max-height:600px) {
+          .bgimg {
+            height: 230vh;
+          }
+        }
+
+        @media screen and (max-width: 320px) and (max-height:600px) {
+          .bgimg {
+            height: 350vh;
+          }
+        }
+
+        @media screen and (max-width: 1050px) and (max-height:500px) {
+          .bgimg {
+            height: 275vh;
+          }
+        }
+
+        @media screen and (max-width: 320px) and (max-height:500px) {
+          .bgimg {
+            height: 385vh;
+          }
+        }
+
+        @media screen and (max-width: 1024px) and (max-height:400px) {
+          .bgimg {
+            height: 350vh;
+          }
+        }
+
+        @media screen and (max-width: 320px) and (max-height:400px) {
+          .bgimg {
+            height: 500vh;
+          }
+        }
+
+        @media screen and (max-width: 1440px) and (max-height:300px) {
+          .bgimg {
+            height: 400vh;
+          }
+        }
+
+        @media screen and (max-width: 375px) and (max-height:300px) {
+          .bgimg {
+            height: 500vh;
+          }
+        }
+
+        @media screen and (max-width: 320px) and (max-height:300px) {
+          .bgimg {
+            height: 600vh;
+          }
+        }
+
+        @media screen and (max-width: 1440px) and (max-height:200px) {
+          .bgimg {
+            height: 600vh;
+          }
+        }
+
+        @media screen and (max-width: 375px) and (max-height:200px) {
+          .bgimg {
+            height: 700vh;
+          }
+        }
+
+        @media screen and (max-width: 320px) and (max-height:200px) {
+          .bgimg {
+            height: 850vh;
+          }
+        }
+
+        /*
+        .form-div input.hs-submit {
+          background-color: black;
+        }
+
+        #hbspt-form-ab101d82-605f-4a6b-84b4-569fc940feb7 input{
+          background: #0e0e10;
+        }*/
+
 </style>
 
 {{ end }}
