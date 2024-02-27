@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
 <div class="bgimg">
-  <img src="bg-gif.gif" alt="Background GIF" id="background-gif">
+  <img src="bg-4.gif" alt="Background GIF" id="background-gif">
   {{ if .Site.Params.twitter.enable }}
       <div class="topright"> 
           {{ partial "twitter-feed.html" . }}
@@ -112,6 +112,7 @@
         display: block; /* Remove any extra spacing */
         position: absolute; /* Position the video absolutely within the .bgimg container */
         z-index: -1000;
+        filter: brightness(80%) contrast(130%);
       }
 
         .logo {
@@ -137,7 +138,7 @@
         /* Position text in the middle */
         .middle {
           position: absolute;
-          top: 30%;
+          top: 25%;
           left: 50%;
           transform: translate(-50%, -50%);
           justify-content: center;
@@ -156,14 +157,18 @@
           width: 70%;
         }
 
-        @media screen and (max-width: 1350px) {
+        @media screen and (max-width: 1400px) {
+          .bgimg {
+            height: 140vh;
+          }
+          
           .middle .form-div {
             width: 85%;
           }
         }
         
         .text-outer {
-          font-size: 20px;
+          font-size: 18px;
           width: 100%;
           position: absolute;
           left: 50%;
@@ -273,7 +278,7 @@
 
         @media screen and (max-width: 1050px) {
           .bgimg {
-            height: 115vh;
+            height: 150vh;
           }
 
           .middle {
@@ -283,23 +288,11 @@
 
         @media screen and (max-width: 895px) {
           .bgimg {
-            height: 120vh;
+            height: 135vh;
           }
 
           .middle {
             width: 75%;
-          }
-        }
-
-        @media screen and (max-width: 585px) {
-          .bottomleft {
-            display: none;
-          }
-        }
-
-        @media screen and (max-width: 395px) {
-          .bgimg {
-            height: 125vh;
           }
 
           .middle {
@@ -307,9 +300,35 @@
           }
         }
 
+        @media screen and (max-width: 585px) {
+          .bottomleft {
+            display: none;
+          }
+
+          .bgimg {
+            height: 150vh;
+          }
+        }
+
+        @media screen and (max-width: 420px) {
+          .bgimg {
+            height: 150vh;
+          }
+
+          .middle {
+            top: 15%;
+          }
+        }
+        
+        @media screen and (max-width: 385px) {
+          .bgimg {
+            height: 170vh;
+          }
+        }
+
         @media screen and (max-width: 300px) {
           .bgimg {
-            height: 135vh;
+            height: 225vh;
           }
         }
 </style>
