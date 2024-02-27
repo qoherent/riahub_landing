@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
 <div class="bgimg">
-  <img src="bg-4.gif" alt="Background GIF" id="background-gif">
+  <img src="bg2-gif.gif" alt="Background GIF" id="background-gif">
   {{ if .Site.Params.twitter.enable }}
       <div class="topright"> 
           {{ partial "twitter-feed.html" . }}
@@ -112,7 +112,6 @@
         display: block; /* Remove any extra spacing */
         position: absolute; /* Position the video absolutely within the .bgimg container */
         z-index: -1000;
-        filter: brightness(80%) contrast(130%);
       }
 
         .logo {
