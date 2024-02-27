@@ -1,6 +1,9 @@
 {{ define "main" }}
 <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
 <link rel="dns-prefetch" href="https://use.fontawesome.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <div class="bgimg">
   <img src="bg2-gif.gif" alt="Background GIF" id="background-gif">
   {{ if .Site.Params.twitter.enable }}
@@ -142,6 +145,8 @@
           transform: translate(-50%, -50%);
           justify-content: center;
           width: 45%;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
         }
 
         .middle h1 {
@@ -172,15 +177,23 @@
           position: absolute;
           left: 50%;
           transform: translate(-50%, 0);
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
         }
         
         .text {
           margin-top: 10px;
           text-align: center;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+          font-weight: lighter;
         }
 
         .text a {
           color: white;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+          font-weight: lighter;
         }
         
         .text a:hover {
