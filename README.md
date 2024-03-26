@@ -1,4 +1,4 @@
-<h2 align="center">This repo serves the landing page for Qoherent's RIAHUB, for more information visit <a target="blank" href="https://riahub.ai/">riahub.ai</a></h2>
+<h2 align="center">This repo serves the landing page for Qoherent's RIA Hub, for more information visit <a target="blank" href="https://RIA Hub.ai/">RIA Hub.ai</a></h2>
 
 <h1 align="center">About Qoherent</h1>
 
