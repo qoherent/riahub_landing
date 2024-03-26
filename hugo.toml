@@ -1,12 +1,12 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'RIAHUB - Lets build intelligent radios together.'
+title = 'RIA Hub - Lets build intelligent radios together.'
 
 [params]
     title = "" 
     description = "Let's build intelligent radios together."
     favicon = "favicon.ico"
-    message = "RIAHUB - COMING SOON!" 
+    message = "RIA Hub - COMING SOON!" 
     release = "June 20, 2025" 
     background = "" 
 

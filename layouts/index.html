@@ -2,6 +2,425 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+  * {
+      margin: 0;
+      padding: 0;
+      }
+      
+      .bgimg {
+      /* Full-screen */
+      height: 100vh; /* Use viewport height for full-screen height */
+      /* Center the background image */
+      background-position: center;
+      /* Scale and zoom in the image */
+      background-size: cover;
+      /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+      position: relative;
+      /* Add a white text color to all elements inside the .bgimg container */
+      color: white;
+      /* Add a font */
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      /* Set the font-size to 25 pixels */
+      font-size: 25px;
+      }
+      
+      .bgimg #background-gif {
+      width: 100%;
+      height: 100%; /* Make the video fill the entire .bgimg container */
+      object-fit: cover; /* Make the video cover the container without stretching */
+      display: block; /* Remove any extra spacing */
+      position: absolute; /* Position the video absolutely within the .bgimg container */
+      z-index: -1000;
+    }
+
+      .logo {
+        width: 150px;
+        height: 32px;
+      }
+      
+      
+      /* Position text in the top-left corner */
+      .topleft {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      }
+      
+      /* Position text in the bottom-left corner */
+      .bottomleft {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      }
+      
+      /* Position text in the middle */
+      .middle {
+        position: absolute;
+        top: 22.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        width: 45%;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+      }
+
+      .middle h1 {
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .middle .form-div {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 70%;
+      }
+
+      @media screen and (max-width: 1400px) {
+        .bgimg {
+          height: 140vh;
+        }
+        
+        .middle .form-div {
+          width: 85%;
+        }
+      }
+      
+      .text-outer {
+        font-size: 18px;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+      }
+      
+      .text {
+        margin-top: 10px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-weight: lighter;
+      }
+
+      .text a {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-weight: lighter;
+      }
+      
+      .text a:hover {
+        text-decoration: none;
+      }
+      
+      
+      .menu-container div {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .menu ul {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #demo{
+        font-size:30px;
+        padding: 10px;
+      }
+
+      @media screen and (max-width:600px) {
+        .middle h1{
+          font-size: 35px;
+        }
+        #demo{
+          font-size: 20px;
+        }
+      }
+      
+      /* Style the <hr> element */
+      hr {
+      margin: 15px auto 15px auto;
+      width: 40%;
+      }
+      
+      /* right side */ 
+      .social-icons {
+        text-align: center;
+        filter: brightness(0) invert(1);
+      }
+      
+      .social-icons .social-icons-list {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+      }
+      
+      .social-icons-list .social-icon {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 24px;
+        margin: 0 6px;
+        width: 24px;
+      }
+      
+      .social-icon a svg path {
+        transition: fill 0.15s ease;
+      }
+
+      .social-icon a {
+        transition: ease-in-out 0.1s;
+      }
+
+      .social-icon a:hover {
+        opacity: 0.75;
+      }
+      
+      .topright {
+        position: absolute;
+        top: 16px;
+        right: 15px;
+      }
+      
+      .topright a{ 
+        text-decoration: none;
+        color: #0e0e10;
+      }
+      
+      /* left side */
+      .left{
+        right: 0;
+        bottom: 10px;
+        position: absolute;
+      }
+
+      /* bottom right */
+      .bottomright {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+
+      @media screen and (max-width: 1050px) {
+        .bgimg {
+          height: 150vh;
+        }
+
+        .middle {
+          top: 25%;
+        }
+      }
+
+      @media screen and (max-width: 895px) {
+        .bgimg {
+          height: 135vh;
+        }
+
+        .middle {
+          width: 75%;
+        }
+
+        .middle {
+          top: 20%;
+        }
+      }
+
+      @media screen and (max-width: 650px) {
+        .bottomleft {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 585px) {
+
+        .bgimg {
+          height: 150vh;
+        }
+      }
+
+      @media screen and (max-width: 420px) {
+        .bgimg {
+          height: 150vh;
+        }
+
+        .middle {
+          top: 15%;
+        }
+      }
+      
+      @media screen and (max-width: 385px) {
+        .bgimg {
+          height: 170vh;
+        }
+      }
+
+      @media screen and (max-width: 300px) {
+        .bgimg {
+          height: 225vh;
+        }
+      }
+
+      @media screen and (max-height: 800px) {
+        .bgimg {
+          height: 150vh;
+        }
+      }
+
+      @media screen and (max-height: 675px) {
+        .bgimg {
+          height: 220vh;
+        }
+      }
+
+      @media screen and (max-height: 500px) {
+        .bgimg {
+          height: 250vh;
+        }
+      }
+
+      @media screen and (max-height: 425px) {
+        .bgimg {
+          height: 275vh;
+        }
+      }
+
+      @media screen and (max-height: 375px) {
+        .bgimg {
+          height: 300vh;
+        }
+      }
+
+      @media screen and (max-height: 315px) {
+        .bgimg {
+          height: 325vh;
+        }
+      }
+
+      @media screen and (max-height: 285px) {
+        .bgimg {
+          height: 365vh;
+        }
+      }
+
+      @media screen and (max-height: 250px) {
+        .bgimg {
+          height: 500vh;
+        }
+      }
+
+      @media screen and (max-height: 200px) {
+        .bgimg {
+          height: 700vh;
+        }
+      }
+
+      @media screen and (max-width: 425px) and (max-height:443px) {
+        .bgimg {
+          height: 300vh;
+        }
+      }
+
+      @media screen and (max-width: 320px) and (max-height:443px) {
+        .bgimg {
+          height: 325vh;
+        }
+      }
+
+      @media screen and (max-width: 1024px) and (max-height:700px) {
+        .bgimg {
+          height: 200vh;
+        }
+      }
+
+      @media screen and (max-width: 425px) and (max-height:600px) {
+        .bgimg {
+          height: 230vh;
+        }
+      }
+
+      @media screen and (max-width: 320px) and (max-height:600px) {
+        .bgimg {
+          height: 350vh;
+        }
+      }
+
+      @media screen and (max-width: 1050px) and (max-height:500px) {
+        .bgimg {
+          height: 275vh;
+        }
+      }
+
+      @media screen and (max-width: 320px) and (max-height:500px) {
+        .bgimg {
+          height: 385vh;
+        }
+      }
+
+      @media screen and (max-width: 1024px) and (max-height:400px) {
+        .bgimg {
+          height: 350vh;
+        }
+      }
+
+      @media screen and (max-width: 320px) and (max-height:400px) {
+        .bgimg {
+          height: 500vh;
+        }
+      }
+
+      @media screen and (max-width: 1440px) and (max-height:300px) {
+        .bgimg {
+          height: 400vh;
+        }
+      }
+
+      @media screen and (max-width: 375px) and (max-height:300px) {
+        .bgimg {
+          height: 500vh;
+        }
+      }
+
+      @media screen and (max-width: 320px) and (max-height:300px) {
+        .bgimg {
+          height: 600vh;
+        }
+      }
+
+      @media screen and (max-width: 1440px) and (max-height:200px) {
+        .bgimg {
+          height: 600vh;
+        }
+      }
+
+      @media screen and (max-width: 375px) and (max-height:200px) {
+        .bgimg {
+          height: 700vh;
+        }
+      }
+
+      @media screen and (max-width: 320px) and (max-height:200px) {
+        .bgimg {
+          height: 850vh;
+        }
+      }
+
+      /*
+      .form-div input.hs-submit {
+        background-color: black;
+      }
+
+      #hbspt-form-ab101d82-605f-4a6b-84b4-569fc940feb7 input{
+        background: #0e0e10;
+      }*/
+
+</style>
+
 <div class="bgimg">
   <img src="bg-final.gif" alt="Background GIF" id="background-gif">
   {{ if .Site.Params.twitter.enable }}
@@ -26,11 +445,11 @@
       {{/*<p id="demo"></p>
       <div id="countdown" data-release="{{ .Site.Params.release }}"></div>*/}}
       <div class="text-outer">
-          {{/*  <p class="text first">RIAHUB is an AI development and deployment platform for software-defined radios. </p>  */}}
+          {{/*  <p class="text first">RIA Hub is an AI development and deployment platform for software-defined radios. </p>  */}}
           <p class="text first">The exponential demand for wireless spectrum necessitates the merging of AI into RF communications and sensing. AI promises robust spectrum allocation and advanced protocols, but deploying it is a complex and costly engineering challenge.</p>
           <br>
-          <p class="text first">RIAHUB is an AI development and deployment platform for software-defined radios that streamlines engineering, cutting down on complexity and costs while accelerating development. RIAHUB can be used to:</p>
-          {{/*  <p class="text">You can use RIAHUB to:</p><br>  */}} <br>
+          <p class="text first">RIA Hub is an AI development and deployment platform for software-defined radios that streamlines engineering, cutting down on complexity and costs while accelerating development. RIA Hub can be used to:</p>
+          {{/*  <p class="text">You can use RIA Hub to:</p><br>  */}} <br>
           <div class="menu-container">    
               <div class="menu">
                   <ul>
@@ -41,7 +460,7 @@
                   </ul>
               </div>
           </div>
-          <p class="text">RIAHUB is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
+          <p class="text">RIA Hub is built on top of the <a href="https://github.com/qoherent/ria">RIA project</a> and <a href="https://github.com/go-gitea/gitea">Gitea</a>.</p>
           <p class="text">Sign up for our early access program below:</p>
           <br>
           <div class="form-div">
@@ -84,423 +503,5 @@
 
 </div>
 </div>
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        }
-        
-        .bgimg {
-        /* Full-screen */
-        height: 100vh; /* Use viewport height for full-screen height */
-        /* Center the background image */
-        background-position: center;
-        /* Scale and zoom in the image */
-        background-size: cover;
-        /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-        position: relative;
-        /* Add a white text color to all elements inside the .bgimg container */
-        color: white;
-        /* Add a font */
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 300;
-        /* Set the font-size to 25 pixels */
-        font-size: 25px;
-        }
-        
-        .bgimg #background-gif {
-        width: 100%;
-        height: 100%; /* Make the video fill the entire .bgimg container */
-        object-fit: cover; /* Make the video cover the container without stretching */
-        display: block; /* Remove any extra spacing */
-        position: absolute; /* Position the video absolutely within the .bgimg container */
-        z-index: -1000;
-      }
-
-        .logo {
-          width: 150px;
-          height: 32px;
-        }
-        
-        
-        /* Position text in the top-left corner */
-        .topleft {
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        }
-        
-        /* Position text in the bottom-left corner */
-        .bottomleft {
-        position: absolute;
-        bottom: 16px;
-        left: 16px;
-        }
-        
-        /* Position text in the middle */
-        .middle {
-          position: absolute;
-          top: 22.5%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          justify-content: center;
-          width: 45%;
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 300;
-        }
-
-        .middle h1 {
-          text-align: center;
-          font-family: "Courier New", Courier, monospace;
-        }
-
-        .middle .form-div {
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, 0%);
-          width: 70%;
-        }
-
-        @media screen and (max-width: 1400px) {
-          .bgimg {
-            height: 140vh;
-          }
-          
-          .middle .form-div {
-            width: 85%;
-          }
-        }
-        
-        .text-outer {
-          font-size: 18px;
-          width: 100%;
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, 0);
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 300;
-        }
-        
-        .text {
-          margin-top: 10px;
-          text-align: center;
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 300;
-          font-weight: lighter;
-        }
-
-        .text a {
-          color: white;
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 300;
-          font-weight: lighter;
-        }
-        
-        .text a:hover {
-          text-decoration: none;
-        }
-        
-        
-        .menu-container div {
-          display: flex;
-          justify-content: center;
-        }
-        
-        .menu ul {
-          display: flex;
-          flex-direction: column;
-        }
-        
-        #demo{
-          font-size:30px;
-          padding: 10px;
-        }
-
-        @media screen and (max-width:600px) {
-          .middle h1{
-            font-size: 35px;
-          }
-          #demo{
-            font-size: 20px;
-          }
-        }
-        
-        /* Style the <hr> element */
-        hr {
-        margin: 15px auto 15px auto;
-        width: 40%;
-        }
-        
-        /* right side */ 
-        .social-icons {
-          text-align: center;
-          filter: brightness(0) invert(1);
-        }
-        
-        .social-icons .social-icons-list {
-          display: inline-block;
-          list-style-type: none;
-          padding: 0;
-          text-align: center;
-        }
-        
-        .social-icons-list .social-icon {
-          box-sizing: border-box;
-          display: inline-block;
-          height: 24px;
-          margin: 0 6px;
-          width: 24px;
-        }
-        
-        .social-icon a svg path {
-          transition: fill 0.15s ease;
-        }
-
-        .social-icon a {
-          transition: ease-in-out 0.1s;
-        }
-
-        .social-icon a:hover {
-          opacity: 0.75;
-        }
-        
-        .topright {
-          position: absolute;
-          top: 16px;
-          right: 15px;
-        }
-        
-        .topright a{ 
-          text-decoration: none;
-          color: #0e0e10;
-        }
-        
-        /* left side */
-        .left{
-          right: 0;
-          bottom: 10px;
-          position: absolute;
-        }
-
-        /* bottom right */
-        .bottomright {
-          position: absolute;
-          bottom: 10px;
-          right: 10px;
-        }
-
-        @media screen and (max-width: 1050px) {
-          .bgimg {
-            height: 150vh;
-          }
-
-          .middle {
-            top: 25%;
-          }
-        }
-
-        @media screen and (max-width: 895px) {
-          .bgimg {
-            height: 135vh;
-          }
-
-          .middle {
-            width: 75%;
-          }
-
-          .middle {
-            top: 20%;
-          }
-        }
-
-        @media screen and (max-width: 650px) {
-          .bottomleft {
-            display: none;
-          }
-        }
-
-        @media screen and (max-width: 585px) {
-
-          .bgimg {
-            height: 150vh;
-          }
-        }
-
-        @media screen and (max-width: 420px) {
-          .bgimg {
-            height: 150vh;
-          }
-
-          .middle {
-            top: 15%;
-          }
-        }
-        
-        @media screen and (max-width: 385px) {
-          .bgimg {
-            height: 170vh;
-          }
-        }
-
-        @media screen and (max-width: 300px) {
-          .bgimg {
-            height: 225vh;
-          }
-        }
-
-        @media screen and (max-height: 800px) {
-          .bgimg {
-            height: 150vh;
-          }
-        }
-
-        @media screen and (max-height: 675px) {
-          .bgimg {
-            height: 220vh;
-          }
-        }
-
-        @media screen and (max-height: 500px) {
-          .bgimg {
-            height: 250vh;
-          }
-        }
-
-        @media screen and (max-height: 425px) {
-          .bgimg {
-            height: 275vh;
-          }
-        }
-
-        @media screen and (max-height: 375px) {
-          .bgimg {
-            height: 300vh;
-          }
-        }
-
-        @media screen and (max-height: 315px) {
-          .bgimg {
-            height: 325vh;
-          }
-        }
-
-        @media screen and (max-height: 285px) {
-          .bgimg {
-            height: 365vh;
-          }
-        }
-
-        @media screen and (max-height: 250px) {
-          .bgimg {
-            height: 500vh;
-          }
-        }
-
-        @media screen and (max-height: 200px) {
-          .bgimg {
-            height: 700vh;
-          }
-        }
-
-        @media screen and (max-width: 425px) and (max-height:443px) {
-          .bgimg {
-            height: 300vh;
-          }
-        }
-
-        @media screen and (max-width: 320px) and (max-height:443px) {
-          .bgimg {
-            height: 325vh;
-          }
-        }
-
-        @media screen and (max-width: 1024px) and (max-height:700px) {
-          .bgimg {
-            height: 200vh;
-          }
-        }
-
-        @media screen and (max-width: 425px) and (max-height:600px) {
-          .bgimg {
-            height: 230vh;
-          }
-        }
-
-        @media screen and (max-width: 320px) and (max-height:600px) {
-          .bgimg {
-            height: 350vh;
-          }
-        }
-
-        @media screen and (max-width: 1050px) and (max-height:500px) {
-          .bgimg {
-            height: 275vh;
-          }
-        }
-
-        @media screen and (max-width: 320px) and (max-height:500px) {
-          .bgimg {
-            height: 385vh;
-          }
-        }
-
-        @media screen and (max-width: 1024px) and (max-height:400px) {
-          .bgimg {
-            height: 350vh;
-          }
-        }
-
-        @media screen and (max-width: 320px) and (max-height:400px) {
-          .bgimg {
-            height: 500vh;
-          }
-        }
-
-        @media screen and (max-width: 1440px) and (max-height:300px) {
-          .bgimg {
-            height: 400vh;
-          }
-        }
-
-        @media screen and (max-width: 375px) and (max-height:300px) {
-          .bgimg {
-            height: 500vh;
-          }
-        }
-
-        @media screen and (max-width: 320px) and (max-height:300px) {
-          .bgimg {
-            height: 600vh;
-          }
-        }
-
-        @media screen and (max-width: 1440px) and (max-height:200px) {
-          .bgimg {
-            height: 600vh;
-          }
-        }
-
-        @media screen and (max-width: 375px) and (max-height:200px) {
-          .bgimg {
-            height: 700vh;
-          }
-        }
-
-        @media screen and (max-width: 320px) and (max-height:200px) {
-          .bgimg {
-            height: 850vh;
-          }
-        }
-
-        /*
-        .form-div input.hs-submit {
-          background-color: black;
-        }
-
-        #hbspt-form-ab101d82-605f-4a6b-84b4-569fc940feb7 input{
-          background: #0e0e10;
-        }*/
-
-</style>
 
 {{ end }}
